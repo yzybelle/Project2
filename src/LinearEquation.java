@@ -65,6 +65,8 @@ public class LinearEquation {
     private int yOne;
     private int yTwo;
     private double yInt;
+    private String signOne;
+    private String signTwo;
 
 
     public LinearEquation(int xOne, int xTwo, int yOne, int yTwo) {
@@ -86,42 +88,52 @@ public class LinearEquation {
 
 
     public double yIntercept() {
-        yInt = (double) (yOne - (slope() * xOne)); // Adjusted formula for y-intercept
+        yInt = (double) (yOne - (slope() * xOne));
         return yInt;
     }
+public void Conditionals(){
+        if (yInt < 0 ){
+            signTwo = "-";
+            yInt = Math.abs(yInt);
+        }
+        if (yInt == 0){
 
+        }
+
+
+}
 
     public String equation() {
         String signOne = "";
-        String signTwo = "";
-        if (yInt == 0) {
-            yInt = Double.parseDouble(Double.toString(yInt));
-            signTwo = "";
-        }
-        if (yInt < 0) {
-            signTwo = "-";
-            yInt = Math.abs(yIntercept());
-        }
-        if (yInt > 0) {
-            signTwo = "+";
-            yInt = yIntercept();
-        }
-
-
-        if ((yTwo - yOne) / (xTwo - xOne) < 0) {
-            signOne = "-";
-        }
-
-
-        if ((yTwo - yOne) % (xTwo - xOne) > 0 && (yTwo - yOne) / (xTwo - xOne) != 1 && (yTwo - yOne) / (xTwo - xOne) != -1) {
-            return "y = " + signOne + (yTwo - yOne) + "\\" + (xTwo - xOne) + "x" + signTwo + yInt;
-        }
-        if ((yTwo - yOne) % (xTwo - xOne) == 0 && (yTwo - yOne) / (xTwo - xOne) != 1 && (yTwo - yOne) / (xTwo - xOne) != -1) {
-            return "y = " + signOne + (yTwo - yOne) / (xTwo - xOne) + "x" + signTwo + yInt;
-        }
-
-
-        return ""; // Default return to avoid missing returns
+//        String signTwo = "";
+//        if (yInt == 0) {
+//            yInt = Double.parseDouble(Double.toString(yInt));
+//            signTwo = "";
+//        }
+//        if (yInt < 0) {
+//            signTwo = "-";
+//            yInt = Math.abs(yIntercept());
+//        }
+//        if (yInt > 0) {
+//            signTwo = "+";
+//            yInt = yIntercept();
+//        }
+//
+//
+//        if ((yTwo - yOne) / (xTwo - xOne) < 0) {
+//            signOne = "-";
+//        }
+//
+//
+//        if ((yTwo - yOne) % (xTwo - xOne) > 0 && (yTwo - yOne) / (xTwo - xOne) != 1 && (yTwo - yOne) / (xTwo - xOne) != -1) {
+//            return "y = " + signOne + (yTwo - yOne) + "\\" + (xTwo - xOne) + "x" + signTwo + yInt;
+//        }
+//        if ((yTwo - yOne) % (xTwo - xOne) == 0 && (yTwo - yOne) / (xTwo - xOne) != 1 && (yTwo - yOne) / (xTwo - xOne) != -1) {
+//            return "y = " + signOne + (yTwo - yOne) / (xTwo - xOne) + "x" + signTwo + yInt;
+//        }
+//
+//
+//        return ""; // Default return to avoid missing returns
     }
 
 
