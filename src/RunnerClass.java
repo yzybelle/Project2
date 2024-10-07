@@ -24,12 +24,19 @@ public class RunnerClass {
         int xCoordTwo = Integer.parseInt(secondCoords.substring(0,indexTwo));
         int yCoordTwo = Integer.parseInt(secondCoords.substring((indexTwo+1)));
 
+        Scanner thirdPoint = new Scanner(System.in);  // Create a Scanner object
+        System.out.println("Enter a point to find corresponding y value: ");
+        String third = (String) thirdPoint.nextLine();
+        double xPoint = Double.valueOf(third);
+
+
         LinearEquation coordinates = new LinearEquation(xCoordOne,xCoordTwo,yCoordOne,yCoordTwo);
 
         System.out.println("First Pair: "+"("+xCoordOne+","+yCoordOne+")");
         System.out.println("Second Pair: "+"("+xCoordTwo+","+yCoordTwo+")");
         System.out.println("Slope: "+ coordinates.slope());
-//        System.out.println(coordinates.distance());
-        System.out.println(coordinates.equation());
+        System.out.println("Distance: "+ coordinates.distance());
+        System.out.println("Equation: " + coordinates.equation());
+        System.out.println("The corresponding point on the line is: " + coordinates.calculateY(xPoint));
     }
 }
