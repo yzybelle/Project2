@@ -102,12 +102,19 @@ public void Conditionals(){
         yIntercepp = String.valueOf(yInt);
         }
         if (yInt > 0) {
-
-
+          signTwo = "+";
+          yIntercepp = String.valueOf(yInt);
 }
-
+    if ((yTwo - yOne) % (xTwo - xOne) > 0 && (yTwo - yOne) / (xTwo - xOne) != 1 && (yTwo - yOne) / (xTwo - xOne) != -1) {
+          return "y = " + signOne + (yTwo - yOne) + "\\" + (xTwo - xOne) + "x" + signTwo + yInt;
+     }
+        if ((yTwo - yOne) % (xTwo - xOne) == 0 && (yTwo - yOne) / (xTwo - xOne) != 1 && (yTwo - yOne) / (xTwo - xOne) != -1) {
+           return "y = " + signOne + (yTwo - yOne) / (xTwo - xOne) + "x" + signTwo + yInt;
+       }
     public String equation() {
-            String signOne = "";
+
+//
+//            String signOne = "";
 //        String signTwo = "";
 //        if (yInt == 0) {
 //            yInt = Double.parseDouble(Double.toString(yInt));
