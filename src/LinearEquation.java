@@ -92,19 +92,22 @@ public class LinearEquation {
         return yInt;
     }
 public void Conditionals(){
+        String yIntercepp;
         if (yInt < 0 ){
             signTwo = "-";
-            yInt = Math.abs(yInt);
+            yIntercepp = String.valueOf(Math.abs(yInt));
         }
         if (yInt == 0){
-
+        signTwo = "";
+        yIntercepp = String.valueOf(yInt);
         }
+        if (yInt > 0) {
 
 
 }
 
     public String equation() {
-        String signOne = "";
+            String signOne = "";
 //        String signTwo = "";
 //        if (yInt == 0) {
 //            yInt = Double.parseDouble(Double.toString(yInt));
